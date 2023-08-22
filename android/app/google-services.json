@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "524710855349",
+    "project_id": "notebook-app-284df",
+    "storage_bucket": "notebook-app-284df.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:524710855349:android:fb1f2243ec03781eb674fc",
+        "android_client_info": {
+          "package_name": "com.yilmaz.noteapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "524710855349-ojjpel3p1j7ngngn4utgrvsbdmr0udab.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB_atR-fNQwBeK7X-4yhBM_u7dyk5ZhrQk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "524710855349-ojjpel3p1j7ngngn4utgrvsbdmr0udab.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
