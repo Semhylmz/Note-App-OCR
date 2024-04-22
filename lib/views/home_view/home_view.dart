@@ -12,9 +12,8 @@ import 'package:noteapp/views/home_view/widgets/home_appbar.dart';
 import 'package:noteapp/views/home_view/home_note_content.dart';
 import 'package:noteapp/views/home_view/widgets/home_drawer.dart';
 import 'package:noteapp/views/home_view/widgets/home_empty_widget.dart';
+import 'package:permission_handler/permission_handler.dart';
 import 'package:provider/provider.dart';
-
-import '../../service/local_auth_service.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);

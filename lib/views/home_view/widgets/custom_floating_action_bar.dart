@@ -17,9 +17,13 @@ class CustomFloatingActionButton extends StatelessWidget {
       child: Container(
         key: UniqueKey(),
         decoration: BoxDecoration(
-            border: Border.all(color: mRed, width: 3.0),
-            shape: BoxShape.circle),
+          border: Border.all(color: mRed, width: 3.0),
+          shape: BoxShape.circle,
+        ),
         child: FloatingActionButton(
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(30.0),
+          ),
           child: AnimatedSwitcher(
             duration: const Duration(milliseconds: 350),
             child: Icon(Icons.edit_outlined,

@@ -24,42 +24,41 @@ class AboutApp extends StatelessWidget {
       ),
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 22.0, vertical: 11.0),
-        child: SingleChildScrollView(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text(
-                    aboutAppContent,
-                    style: TextStyle(
-                      fontSize: 18.0,
-                      color: context.watch<ThemeNotifier>().isLight
-                          ? mBlackOpacityColor
-                          : mWhiteOpacityColor,
-                    ),
+        child: ListView(
+          shrinkWrap: true,
+          physics: const BouncingScrollPhysics(),
+          children: [
+            Column(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                Text(
+                  aboutAppContent,
+                  style: TextStyle(
+                    fontSize: 18.0,
+                    color: context.watch<ThemeNotifier>().isLight
+                        ? mBlackOpacityColor
+                        : mWhiteOpacityColor,
                   ),
-                ],
-              ),
-              const SizedBox(height: 24.0),
-              Column(
-                children: [
-                  AboutButton(
+                ),
+                const SizedBox(height: 24.0),
+                Column(
+                  children: [
+                    AboutButton(
                       title: 'Kullanıcı sözleşmesi',
                       icon: Icons.text_snippet_outlined,
-                      isLight: context.watch<ThemeNotifier>().isLight),
-                  const SizedBox(height: 24.0),
-                  AboutButton(
-                    title: 'Açık kaynak lisanslar',
-                    icon: Icons.code_outlined,
-                    isLight: context.watch<ThemeNotifier>().isLight,
-                  ),
-                ],
-              ),
-            ],
-          ),
+                      isLight: context.watch<ThemeNotifier>().isLight,
+                    ),
+                    const SizedBox(height: 24.0),
+                    AboutButton(
+                      title: 'Açık kaynak lisanslar',
+                      icon: Icons.code_outlined,
+                      isLight: context.watch<ThemeNotifier>().isLight,
+                    ),
+                  ],
+                ),
+              ],
+            )
+          ],
         ),
       ),
     );

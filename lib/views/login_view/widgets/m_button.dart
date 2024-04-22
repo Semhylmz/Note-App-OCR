@@ -38,7 +38,8 @@ class MButton extends StatelessWidget {
           },
           style: ElevatedButton.styleFrom(
             padding: const EdgeInsets.all(12.0),
-            primary: Colors.transparent,
+            //primary: Colors.transparent,
+            backgroundColor: Colors.transparent,
             shadowColor: Colors.transparent,
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(22.0),
