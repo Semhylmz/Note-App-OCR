@@ -1,4 +1,7 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
+import 'package:noteapp/views/about/widgets/show_modal_bottom_sheet.dart';
 import 'package:noteapp/widgets/appbar_text.dart';
 import 'package:provider/provider.dart';
 import '../../constants/color_constants.dart';
@@ -46,13 +49,34 @@ class AboutApp extends StatelessWidget {
                     AboutButton(
                       title: 'Kullanıcı sözleşmesi',
                       icon: Icons.text_snippet_outlined,
-                      isLight: context.watch<ThemeNotifier>().isLight,
+                      onTap: () {
+                        showModalBottomSheet(
+                          context: context,
+                          backgroundColor:
+                              Provider.of<ThemeNotifier>(context, listen: false)
+                                      .isLight
+                                  ? mWhiteColor
+                                  : mBlackColor,
+                          shape: const RoundedRectangleBorder(
+                            borderRadius: BorderRadius.only(
+                              topLeft: Radius.circular(32.0),
+                              topRight: Radius.circular(32.0),
+                            ),
+                          ),
+                          builder: (context) => const MBottomSheet(
+                            title: 'Kullanıcı sözleşmesi',
+                            content: userAgreement,
+                          ),
+                        );
+                      },
                     ),
                     const SizedBox(height: 24.0),
                     AboutButton(
                       title: 'Açık kaynak lisanslar',
                       icon: Icons.code_outlined,
-                      isLight: context.watch<ThemeNotifier>().isLight,
+                      onTap: () {
+                        showLicensePage(context: context);
+                      },
                     ),
                   ],
                 ),
