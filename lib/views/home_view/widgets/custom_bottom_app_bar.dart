@@ -7,7 +7,7 @@ import '../../record_view/voice_recorder_view.dart';
 import 'buttons/get_img_button.dart';
 
 class CustomBottomAppBar extends StatelessWidget {
-  const CustomBottomAppBar({
+  const   CustomBottomAppBar({
     super.key,
   });
 
